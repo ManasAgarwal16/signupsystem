@@ -1,0 +1,42 @@
+.flex
+{
+    display:flex;
+}
+.flex-1
+{
+    flex:1;
+}
+.items-center
+{
+    align-items:center;
+}
+.justify-between
+{
+    justify-content:space-between;
+}
+.btn
+{
+    padding: 1rem 2rem;
+    font-size: 18px;
+    font-weight: 700;
+    border:2px solid transparent;
+    outline:none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.btn-primary
+{
+    color:black;
+}
+.btn-primary:hover
+{
+    background:rgb(107, 104, 104);
+    color:rgb(201, 230, 230);
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.justify-center
+{
+    justify-content: center;
+}

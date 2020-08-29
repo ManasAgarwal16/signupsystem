@@ -1,0 +1,333 @@
+@import 'utilities.css';
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+body
+{
+    font-family: 'Baloo Bhai 2', cursive;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+.left  img
+{
+    width: 155px;
+}
+header{
+background: #161616;
+clip-path:polygon(0 0, 100% 0, 100% 100%,70% 92%,0 100%) ;
+}
+.container
+{
+    max-width: 1152px;
+    padding: 0 15px;
+    margin:0 auto;
+}
+/*@media (min-width:576px)
+{
+    .container
+    {
+        max-width: 540px;
+    }
+}
+@media (min-width:768px)
+{
+    .container
+    {
+        max-width: 720px;
+    }
+}
+@media (min-width :1200px)
+{
+    .container
+    {
+        max-width: 1152px;
+    }
+}*/
+
+header nav .left a{
+    color:white;
+    text-decoration:none;
+    margin-right: 3rem;
+    text-transform: uppercase;
+}
+header nav .left a:hover
+{
+    color:cyan;
+    text-decoration: underline;
+}
+
+header nav 
+{
+    padding: 2rem 0;
+}
+header nav .task
+{
+    margin-right: 3rem;
+}
+.hero{
+    padding: 7rem;
+}
+.hero img{
+    width:90%;
+}
+.hero .right
+{
+    color:whitesmoke;
+}
+.hero .right h6
+{
+    font-size: 1.6rem;
+    color:rgb(118, 228, 228);
+    margin-bottom: 0.5rem;
+}
+.hero .right h1
+{
+    font-size: 4rem;
+    font-family: cursive;
+    font-weight: 50;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+.hero .right h1 span{
+    font-family: cursive;
+    color:rgb(118, 228, 228);
+}
+.hero .right p
+{
+    font-size: 20px;
+    line-height: 1.6;
+}
+.hero .right
+{
+    margin-top: -5rem;
+}
+section.aboout .about-img
+{
+    widows: 518px;
+}
+section
+{
+    padding: 6rem 0;
+}
+section.about .about-img{
+    height: 450px;
+}
+section.about h1
+{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-size: 50px;
+    color:white;
+    background:#070606;
+}
+section.about h1 span
+{
+    color:rgb(118, 228, 228);
+}
+section.about h3
+{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight:600;
+    font-size: 30px;
+    background:black;
+    color: white;
+}
+section.about p
+{
+    font-size: 20px;
+    font-family: 'Baloo Bhai 2', cursive;
+    line-height: 1.6;
+}
+.section-heading
+{
+    color:#070606;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5;
+    font-size: 35px;
+
+}
+.section-heading +p
+{
+    color:rgb(22, 26, 26);
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 1.2rem;
+    margin-bottom: 6rem;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bolder;
+}
+.section-heading span
+{
+    color:rgb(118, 228, 228);
+}
+.services
+{
+    background:rgb(240, 240, 240);
+}
+.card-wrapper
+{
+    /*display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap:2rem;*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color:rgb(118, 228, 228);
+}
+.card-wrapper h2
+{
+    background: rgb(22, 26, 26);
+    text-align: center;
+}
+.card-wrapper p
+{
+    font-size: 25px;
+}
+.card p
+{
+    padding: 3rem 2rem ;
+    background: white;
+    position: relative;
+    color:black;
+}
+section.services .card-wrapper .card img
+{
+    position: absolute;
+}
+.card :hover
+{
+    background:rgb(104, 104, 104);
+    color: whitesmoke;
+    cursor: pointer;
+}
+.card a
+{
+    font-size: 30px;
+    font-family: 'Baloo Bhai 2', cursive;
+    color: rgb(3, 3, 3);
+    font-weight: bold;
+}
+/*.card-wrapper .card-1
+{
+    order: 1;
+}
+.card-wrapper .card-2
+{
+    order: 3;
+}
+.card-wrapper .card-3
+{
+    order: 2;
+}*/
+.card a:hover
+{
+    color:rgb(118, 228, 228);
+}
+@media (max-width:1024px)
+{
+    header #main-nav
+    {
+        display: none;
+    }
+    section.about .about-img 
+    {
+        /*display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 280px;
+        margin-bottom: 73rem;*/
+        height: 345px;
+    }
+    .hero img
+    {
+        width:98%;
+    }   
+}
+/*@media (max-width:736px) and (min-width:411)
+{
+    section.about .about-img {
+        height: 324px;
+    }
+}*/
+@media (max-width:576px)
+{
+    .about .right 
+    {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+      /*  margin-left: -20rem;
+        margin-top:-19rem;
+        margin-bottom: -10rem;*/
+        text-align: center;
+    }
+    section.about .about-img {
+        height: 213px;
+    }
+    .hero
+    {
+        flex-direction: column;
+    }
+    .hero .right
+    {
+        margin-top: 23px;
+    }
+    .about-inner-wrap
+    {
+        flex-direction: column ;
+    }
+    .container p
+    {
+        flex-direction: column;
+    }
+    .container .card-wrapper p
+    {
+        flex-direction: column;
+    }
+    .hero img
+    {
+        width: 204%;
+    }
+}
+/*@media (max-width:568px) and (min-width:320)
+{
+    .hero img
+    {
+        width: 204px;
+    }
+}*/
+@media (max-width:318px)
+{
+    .hero .right h1
+    {
+        margin-left: 34px;
+    }
+    section .about .about-img
+    {
+        height:176px;
+        margin-left:10px;
+    }
+    .hero .right h6
+    {
+        margin-left: 49px;
+    }
+    .hero img
+    {
+        height:22vh;
+        width:385%;
+    }
+}
+
+
+
+ 
+
