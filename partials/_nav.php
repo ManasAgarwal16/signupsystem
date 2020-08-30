@@ -21,7 +21,7 @@ echo'<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       if(!$loggedin)
       {
         echo'<li class="nav-item">
-          <a class="nav-link" href="/loginsystem/login.php">login</a>
+          <a class="nav-link" href="/loginsystem/login.php">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/loginsystem/signup.php">Signup</a>

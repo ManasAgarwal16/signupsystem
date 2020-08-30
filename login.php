@@ -1,20 +1,20 @@
 <?php
 $login=false;
 $showError=false;
-if($_SERVER["REQUEST_METHOD"]=="POST")
+if($_SERVER["REQUEST_METHOD"]=="POST")//checking req
 {
   include 'partials/_dbconnect.php';
-  $username=$_POST["username"];
+  $username=$_POST["username"]; // request paramters
   $password=$_POST["password"];
   $exists=false;
   $sql="select * from users where username='$username'";
-  $result= mysqli_query($conn,$sql);
-  $num= mysqli_num_rows($result);
+  $result= mysqli_query($conn,$sql); // uniqueness of username
+  $num= mysqli_num_rows($result);//conversion
   if($num==1)
   {
-    while($row=mysqli_fetch_assoc($result))
+    while($row=mysqli_fetch_assoc($result))//db username fetch
     {
-      if(password_verify($password, $row['password']))
+      if(password_verify($password, $row['password']))//ui pass and db pass check through hashing 
       {
         $login=true;
         session_start();
@@ -26,10 +26,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
       {
         $showError="Invalid Credentials";
       }
-      /*if (!empty($_POST["username"])) 
-      {
-        $showError = "Username is required";
-      }*/
+
     } 
   }
   else
@@ -64,7 +61,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
       margin-top: 60px;
       text-decoration: underline;
       color: ghostwhite;
-    }
+      font-size:55px;
+Enter Your     }
 
     .container form
     {
@@ -87,7 +85,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     if ($login)
     {
     echo'
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="alert alert-success  alert-dismissible fade show" role="alert">
         <strong>Success!</strong>You are logged in!
         <button type="button" class="close"data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -112,14 +110,18 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
       <form action="/loginsystem/login.php" method="post">
         <div class="form-group col-md-6">
           <label for="username">Username</label>
-          <input type="username" class="form-control" id="username" name ="username" aria-describedby="emailHelp" placeholder="Username">
+          <input type="username" class="form-control" id="username" name ="username" aria-describedby="emailHelp" placeholder="Enter Your Username" required>
         </div>
         <div class="form-group col-md-6">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password" Required>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6LdA48QZAAAAAFihcOL6mKQRM3l6BGkFtfJnXA4D" required>
+
         </div>
           <button type="submit" class="btn btn-primary">Login</button>
       </form>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </body>
 </html>
